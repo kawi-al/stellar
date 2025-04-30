@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title>Phxs</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <p>Выберите предмет</p>
+
+  <button onclick="changeText('Введите тему по Алгебре')">Алгебра</button>
+  <button onclick="changeText('Введите тему по Химии')">Химия</button>
+  <button onclick="changeText('Введите тему по Географии')">География</button>
+  <button onclick="changeText('Введите тему по Биологии')">Биология</button>
+
+  <p id="output"></p>
+
+  <script>
+    function changeText(text) {
+      document.getElementById("output").textContent = text;
+    }
+  </script>
+</body>
+</html>
