@@ -3,9 +3,10 @@
 <head> 
   <title>Phxs</title>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>Выберите предмет</p>
+  <p>Выберите предмет:</p>
 
   <button onclick="changeText('Введите тему по Алгебре')">Алгебра</button>
   <button onclick="changeText('Введите тему по Химии')">Химия</button>
@@ -13,6 +14,10 @@
   <button onclick="changeText('Введите тему по Биологии')">Биология</button>
 
   <p id="output"></p>
+
+  <p>Готовые:</p>
+  <p>Физика:</p>
+  <button>Термодинамика</button>
 
   <script>
     function changeText(text) {
