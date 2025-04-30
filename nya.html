@@ -4,24 +4,37 @@
   <title>Phxs</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 <body>
+
   <p>Выберите предмет:</p>
 
-  <button onclick="changeText('Введите тему по Алгебре')">Алгебра</button>
-  <button onclick="changeText('Введите тему по Химии')">Химия</button>
-  <button onclick="changeText('Введите тему по Географии')">География</button>
-  <button onclick="changeText('Введите тему по Биологии')">Биология</button>
+  <button onclick="showLoading('Введите тему по Алгебре')">Алгебра</button>
+  <button onclick="showLoading('Введите тему по Химии')">Химия</button>
+  <button onclick="showLoading('Введите тему по Географии')">География</button>
+  <button onclick="showLoading('Введите тему по Биологии')">Биология</button>
 
+  <div class="loading" id="loading">Загрузка...</div>
   <p id="output"></p>
 
-  <p>Готовые:</p>
-  <p>Физика:</p>
-  <button>Термодинамика</button>
+  <div class="ready-section">
+    <p>Готовые</p>
+    <p>Физика:</p>
+    <button>Сгенерировать</button>
+  </div>
 
   <script>
-    function changeText(text) {
-      document.getElementById("output").textContent = text;
+    function showLoading(text) {
+      const loading = document.getElementById('loading');
+      const output = document.getElementById('output');
+
+      loading.style.display = 'block';
+      output.textContent = '';
+
+      setTimeout(() => {
+        loading.style.display = 'none';
+        output.textContent = text;
+      }, 1000); // 1 секунда "загрузки"
     }
   </script>
 </body>
